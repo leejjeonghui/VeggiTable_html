@@ -11,7 +11,6 @@
         }
 
 
-
         .text{
 
             font-size: 20px;
@@ -47,17 +46,15 @@
         input:focus::placeholder {
             opacity: 0;
         }
-        button.start {
-            border: 0;
-            outline: none;
-            font-size: 20px;
-            background: #F1EFEF;
-            color: white;
-            width: 328px;
-            height: 56px;
-            border-radius: 8px;
-            font-family: Pretendard;
+
+        .start_btn{
+            display: inline-block;
+            padding: 0;
+            border: none;
+            background: none;
         }
+
+
     </style>
 </head>
 <body>
@@ -68,7 +65,9 @@
     <div class="nick">
         <input type="text" name="Nickname" placeholder="닉네임을 입력해주세요">
     </div>
-    <button class="start" type="submit">시작하기</button>
+    <button type="button" class="start_btn" id="start_btn">
+        <img src="images/start_deactivation.png" width="328" height="56">
+    </button>
 </section>
 
 </body>
