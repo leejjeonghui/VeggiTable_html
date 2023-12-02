@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scale='no'"/>
@@ -28,6 +28,7 @@
             background: none;
             color:#535654;
             font-weight:400;
+            text-decoration: underline;
         }
         .placeIcon{
             margin-top: 40px;
@@ -40,13 +41,14 @@
         .text1{
             font-size: 20px;
             margin-bottom:10px;
+            font-weight:500;
         }
 
         .text2{
 
             font-size: 16px;
             margin-bottom:10px;
-            margin-top: 50px;
+            margin-top: 40px;
             font-weight: 500;
 
         }
@@ -64,10 +66,13 @@
             display: flex;
         }
         .popular{
-            width: 200px;
-            height:181px;
-            background: gainsboro;
-            margin-bottom: 19px;
+           width: 200px;
+            height: 181px;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 8px;
+            display: inline-flex;
         }
 
         button.home {
@@ -95,7 +100,7 @@
         .navi_bar{
             align-content: center;
         }
-        .rectangle{
+        .Frame{
             align-items: center;
             justify-content: center;
             display: inline-flex;
@@ -114,10 +119,12 @@
             font-weight: 500;
             line-height: 19px;
             text-align: left;
-        }
-        .rectangle2{
 
-            display: flex;
+
+        }
+        .Frame2{
+
+            flex-direction: column;
             width: 148px;
             height: 156px;
             border-radius: 8px;
@@ -126,15 +133,103 @@
             margin-right: 7px;
 
         }
+        .rest_Info{
+            width: 124px;
+            height: 69px;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 4px;
+            display: inline-flex
+        }
         .VeganOption{
 
+           /* display: inline-block; !*span으로 해서 안보일때(?)*!*/
+            width: 24px;
+            height: 10px;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 2px;
+            display: inline-flex;
             margin-left: 8px;
-            width: 8px;
-            height: 8px;
-            border-radius: 90px;
-            background-color: #326144;
-        }
 
+        }
+        .rest_place{
+            display: flex;
+        }
+        .star{
+            width: 16px;
+            height: 16px;
+            position: relative;
+            flex-direction: column;   /*세로로 정렬하려면 이렇게..*/
+            justify-content: flex-start;
+            align-items: flex-start;
+            display: inline-flex;
+        }
+        .menu{
+            display: flex;
+            height: 0.625rem;
+            align-items: center;
+            gap: 0.125rem;
+            font-size: 8px;
+            font-weight: 400;
+        }
+        .distanceInfo{
+            margin-top: 37px;
+            margin-left: 1px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        .distanceInfo_btn{
+            width: 148px;
+            height: 28px;
+            background: #326144;
+            border-radius: 4px;
+            margin-top: 7px;
+            font-size: 12px;
+            color: #FFFFFF;
+            border: none;
+        }
+        .underline{
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset:-0.3rem;
+            text-decoration-color: #DFEBE4;
+            text-decoration-thickness: 6px;
+
+        }
+        .popular_img{
+            width: 200px;
+            height: 120px;
+            border-radius: 8px;
+            background-color: gainsboro;
+        }
+        .rank{
+            width: 24px;
+            height: 18px;
+            padding: 4px;
+            position: absolute;
+            background: rgba(255, 255, 255, 0.80);
+            box-shadow: 0px 2px 12px rgba(13, 21, 16, 0.06);
+            border-radius: 9px;
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            display: inline-flex;
+            margin-top: 12px;
+            margin-left: 8px;
+            font-size: 8px;
+            font-weight: 700;
+            color: #326144;
+
+        }
+        .popularInfo{
+            font-size:16px;
+            font-weight: 500;
+            width: 176px;
+
+        }
 
     </style>
 </head>
@@ -149,18 +244,44 @@
         <span style="margin-left: 5px; display: block;">위치정보</span>
     </div>
     <div class="text1">
-        <b style="font-weight: 700">닉네임</b><text style="font-weight:500 ">님과 가장 가까운 채식 맛집은<br> <b style="font-weight: 700">식당이름</b>입니다!</text>
+        <b style="font-weight: 700">닉네임</b>님과 가장 가까운 채식 맛집은<br> <b class="underline" >식당이름</b>입니다!
     </div>
     <div class="rest"> <!--홈 화면 상단 식당정보-->
-        <div class="rectangle">
+        <div class="Frame">
         </div> <!--여기는 음식점 사진 들어가는 자리-->
-        <div class = "rectangle2">
-            <div class="rest_name">
+        <div class = "Frame2">
+            <div class="rest_Info" >
+            <span class="rest_name">
                 식당이름
-            </div> <div class="VeganOption"> </div><div style="font-size: 8px;font-weight: 300;color: #8B8E8C;">비건</div>
+                <span class="VeganOption">
+                    <span style="width: 8px; height: 8px; background: #326144; border-radius: 90px;margin-bottom: 2px"></span>
+                    <span style="font-size: 8px;font-weight: 300;color: #8B8E8C;">비건</span>
+                </span>
+
+                 <div class="rest_place"><img src="images/place.png" style="width: 12px; height: 12px;margin-top: 3px;">
+                <span style="color: #535654; font-size: 8px; font-weight: 400;">식당위치</span>
+            </div>
+                <img class="star" src="images/Star.png">
+                <aside class="menu">
+                    <b style="font-weight: 700;">한식</b>
+                    <div>·</div>
+                    <div>대표메뉴1</div>
+                    <div>· </div>
+                    <div>대표메뉴2</div>
+                </aside>
+
+            </span>
+            </div><!--restInfo-->
+            <span><img src="images/Bookmark.png" width="12" height="12"></span>
+            <div class = "distanceInfo">
+                현재위치에서 <b style="font-weight: 700; color: #326144">거리</b>
+                <button class="distanceInfo_btn">
+                    <img src="images/Vector_mapIcon.png" width="12" height="12">
+                    <span>가는 길 확인하기</span></button>
+            </div>
         </div>
 
-        </div>
+    </div>
 
 
     </div>
@@ -174,7 +295,16 @@
         <img src="images/Property%201=western.png"width="100" height=100" style= "margin-right: 8px">
     </div>
     <div class="text2">이번 주 맛집을 소개합니다.</div>
-    <div class="popular">조회순</div>
+    <div class="popular">
+        <div class="popular_img"></div>
+        <div class="rank"> 1위 </div>
+        <div class="popularInfo">식당이름
+            <span class="VeganOption">
+                    <span style="width: 8px; height: 8px; background: #326144; border-radius: 90px;margin-bottom: 2px"></span>
+                    <span style="font-size: 8px;font-weight: 300;color: #8B8E8C;">비건</span>
+            </span>
+        </div>
+    </div>
 
 </section>
 <div class="navi_bar">
@@ -184,6 +314,6 @@
 </body>
 </html>
 
-
+<!--밑줄 text-decoration: underline;-->
 <!--
 https://developer.mozilla.org/ko/docs/Web/CSS/text-align-->
