@@ -72,6 +72,7 @@
             justify-content: flex-start;
             align-items: flex-start;
             display: inline-flex;
+            margin-bottom: 50px;
         }
 
         button.home {
@@ -274,7 +275,7 @@
             float: right;
             margin-left:96px ;
         }
-        .navi_HomeSegment{
+        .navi_HomeSegment,.navi_MapSegment,.navi_Mypage{
             flex: 1 1 0;
             padding-top: 12px; 
             padding-bottom: 16px;
@@ -291,6 +292,29 @@
             align-items: center;
             display: flex;
         }
+        .StateLayer{
+            width: 64px;
+            height: 32px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            justify-content: center;
+            align-items: center;
+            display: inline-flex;
+        }
+        .LabelText{
+            width: 100%;
+            text-align: center;
+            color: #535654;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 16px;
+            letter-spacing: 0.5px;
+            word-wrap: break-word;
+            font-family: Pretendard;
+        }
+
     </style>
 </head>
 <body>
@@ -389,11 +413,27 @@
 
 </section>
 <section class="navi_bar">
-    <button class="navi_HomeSegment">
+    <a class="navi_HomeSegment">
         <div class="IconContainer"></div>
         <img src="images/homeIcon.png" width="24" height="24">
+        <div class="StateLayer">
+            <div class="LabelText" >Home</div>
         </div>
-    </button>
+    </a>
+    <a class="navi_MapSegment">
+        <div class="IconContainer"></div>
+        <img src="images/place.png" width="24" height="24">
+        <div class="StateLayer">
+            <div class="LabelText" >Veggie Map</div>
+        </div>
+    </a>
+    <a class="navi_Mypage">
+        <div class="IconContainer"></div>
+        <img src="images/person.png" width="24" height="24">
+        <div class="StateLayer">
+            <div class="LabelText" >MyPage</div>
+        </div>
+    </a>
 </section>
 </body>
 </html>
