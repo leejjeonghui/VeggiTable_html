@@ -60,6 +60,11 @@
             width:328px;
             height:56px;
             border-radius: 8px;
+            font-family: Pretendard;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 23.87px;
+            color: #FFFFFF;
         }
         .back{
             border: none;
@@ -95,7 +100,7 @@
         <li>닉네임은 맛집 리뷰 작성시 노출될 수 있어요.</li>
         <li>닉네임은 언제든지 변경할 수 있어요.</li> <!--리스트!-->
     </ul>
-
+<form action="home_gps_o.html" name = "saveNickname" method="POST">
     <div class="nick">
         <input type="text" name="Nickname" placeholder="닉네임을 입력해주세요">
     </div>
@@ -106,10 +111,8 @@
         2자 ~ 6자 사이로 입력해주세요.
         <span style="font-size: 8px; float: right; margin-right: 10px ">0/6</span> <!--float: right 오른쪽정렬??-->
     </div>
-    <button type="button" class="start_btn" id="start_btn">
-        <text style="color: #ffffff; align-items: center;
-        font-family: Pretendard; font-weight: 500; font-size: 20px;line-height: 23.87px">시작하기</text>
-    </button>
+    <input type="submit" value="시작하기" class="start_btn" id="start_btn">
+</form>
 </section>
 
 </body>
