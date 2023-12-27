@@ -44,6 +44,7 @@
             font-size: 15px;
             justify-content: center;
             border: none;
+
         }
         .vegan_type{
             margin-top: 14px;
@@ -55,6 +56,7 @@
             height: 35px;
             align-items: center;
             justify-content: center;
+            /*border: 2px solid #326144; 선택했을 땐 이렇게*/
         }
         .vegan{
             width: 8px;
@@ -76,13 +78,13 @@
             border-radius: 8px;
             background-color: gainsboro;
             margin-left: 4px;
-            margin-top: 16px;
             margin-right: 16px;
         }
 
         .rest_Segment{
             display: flex;
             flex-direction: row;
+            align-items: center;
         }
         .rest_frame{
             width: 215px;
@@ -91,7 +93,7 @@
             justify-content: center;
             align-items: flex-start;
             display: inline-flex;
-            margin-top: 16px;
+            margin-bottom: 4px;
         }
         .frame{
             justify-content: flex-start;
@@ -162,8 +164,8 @@
         </div>
 
     </div>
-
-        <hr style="width: 328px;border: 1px;angle: -0 deg;border: 1px solid #F1EFEF" > <!--수평선 그리기-->
+    <!--수평선~div닫히는 곳(?)까지가 식당정보 들어가는 부분-->
+    <hr style="width: 328px;border: 1px;angle: -0 deg;border: 1px solid #F1EFEF;margin-top: 16px;margin-bottom: 16px;"> <!--수평선 그리기-->
         <div class="rest_Segment"> <!--얘를 먼저 가로정렬하고-->
             <div class="rest_Img">img</div>
             <div class="rest_frame">
@@ -175,7 +177,54 @@
                 <div class="frame">
                     <img src="images/place.png" width="12" height="12">
                     <span class="location_font">식당위치</span>
+                    <img src="images/Star.png" width="12" height="12" style="margin-left: 8px">
+                    <span class="location_font">4.5</span>
                 </div>
+                <div class="frame" style="margin-top: 12px">
+                    <b style="font-size: 8px;">한식</b><span style="font-size: 8px;">&nbsp;· 대표메뉴1 · 대표메뉴2</span>
+
+            </div>
+        </div>
+    </div><!--수평선~div닫히는 곳(?)까지가 식당정보 들어가는 부분-->
+    <hr style="width: 328px;border: 1px;angle: -0 deg;border: 1px solid #F1EFEF;margin-top: 16px;margin-bottom: 16px;"> <!--수평선 그리기-->
+    <div class="rest_Segment"> <!--얘를 먼저 가로정렬하고-->
+        <div class="rest_Img">img</div>
+        <div class="rest_frame">
+            <div class="frame">
+                <div style="font-weight: 500;font-size: 16px; margin-right: 8px;">식당명</div>
+                <span style="width: 8px; height: 8px; background: #326144; border-radius: 90px;margin-right: 2px"></span>
+                <span style="font-size: 8px;font-weight: 300;color: #8B8E8C;">비건</span>
+            </div>
+            <div class="frame">
+                <img src="images/place.png" width="12" height="12">
+                <span class="location_font">식당위치</span>
+                <img src="images/Star.png" width="12" height="12" style="margin-left: 8px">
+                <span class="location_font">4.5</span>
+            </div>
+            <div class="frame" style="margin-top: 12px">
+                <b style="font-size: 8px;">한식</b><span style="font-size: 8px;">&nbsp;· 대표메뉴1 · 대표메뉴2</span>
+
+            </div>
+        </div>
+    </div> <!--수평선~div닫히는 곳(?)까지가 식당정보 들어가는 부분-->
+    <hr style="width: 328px;border: 1px;angle: -0 deg;border: 1px solid #F1EFEF;margin-top: 16px;margin-bottom: 16px;"> <!--수평선 그리기-->
+    <div class="rest_Segment"> <!--얘를 먼저 가로정렬하고-->
+        <div class="rest_Img">img</div>
+        <div class="rest_frame">
+            <div class="frame">
+                <div style="font-weight: 500;font-size: 16px; margin-right: 8px;">식당명</div>
+                <span style="width: 8px; height: 8px; background: #326144; border-radius: 90px;margin-right: 2px"></span>
+                <span style="font-size: 8px;font-weight: 300;color: #8B8E8C;">비건</span>
+            </div>
+            <div class="frame">
+                <img src="images/place.png" width="12" height="12">
+                <span class="location_font">식당위치</span>
+                <img src="images/Star.png" width="12" height="12" style="margin-left: 8px">
+                <span class="location_font">4.5</span>
+            </div>
+            <div class="frame" style="margin-top: 12px">
+                <b style="font-size: 8px;">한식</b><span style="font-size: 8px;">&nbsp;· 대표메뉴1 · 대표메뉴2</span>
+
             </div>
         </div>
     </div>
