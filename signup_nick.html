@@ -100,19 +100,27 @@
         <li>닉네임은 맛집 리뷰 작성시 노출될 수 있어요.</li>
         <li>닉네임은 언제든지 변경할 수 있어요.</li> <!--리스트!-->
     </ul>
-<form action="home_gps_o.html" name = "saveNickname" method="POST">
-    <div class="nick">
-        <input type="text" name="Nickname" placeholder="닉네임을 입력해주세요">
-    </div>
-    <div>
-        <hr style="width: 328px;border: 1px;angle: -0 deg;border: 1px solid #0D1510" > <!--수평선 그리기-->
-    </div >
-    <div class="guide">
-        2자 ~ 6자 사이로 입력해주세요.
-        <span style="font-size: 8px; float: right; margin-right: 10px ">0/6</span> <!--float: right 오른쪽정렬??-->
-    </div>
-    <input type="submit" value="시작하기" class="start_btn" id="start_btn">
-</form>
+    <form action="/saveNickname" name = "saveNickname" method="POST">
+        <div class="nick">
+            <input type="text" name="nickname" maxlength="5" placeholder="닉네임을 입력해주세요" oninput="countChar(this)">
+        </div>
+        <div>
+            <hr style="width: 328px;border: 1px;angle: -0 deg;border: 1px solid #0D1510" > <!--수평선 그리기-->
+        </div >
+        <div class="guide">
+            2자 ~ 6자 사이로 입력해주세요.
+            <span id="countChar"style="font-size: 8px; float: right; margin-right: 10px ">0/6</span> <!--float: right 오른쪽정렬??-->
+        </div>
+        <input type="submit" value="시작하기" class="start_btn" id="start_btn">
+    </form>
+    <script>
+        function countChar(input){
+            var max = 6;
+            var current = input.value.length;
+
+            document.getElementById("countChar").textContent = current + "/" + max;
+        }
+    </script>
 </section>
 
 </body>
